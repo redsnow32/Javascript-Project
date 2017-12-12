@@ -109,7 +109,7 @@ switch (job) {
         console.log("Brandon does something else.")
 }
 */
-
+/*
 var johnHeight = 72;
 var johnAge = 25;
 var brandonHeight = 73;
@@ -132,6 +132,71 @@ if(brandonTotal && derekTotal < johnTotal) {
 // } else if (johnTotal === brandonTotal) {
 //     console.log("!")
 }
+*/
+//Lecture: Functions
+/*
+function ageCalculator (yearOfBirth) {
+    var age = 2016 - yearOfBirth;
+    return age;
+}
 
+var ageJohn = ageCalculator(1990);
+var ageBrandon = ageCalculator(1988);
+var ageDerek = ageCalculator(1990);
+//console.log(ageBrandon);
 
+function yearsUntilRetirement (name, year) {
+    var age = ageCalculator(year);
+    var retirement = 65 - age;
 
+    if(retirement >= 0) {
+    console.log(name + " has " + retirement + " years until retirement.");
+    } else {
+        console.log(name + " is already retired.")
+    }
+}
+
+yearsUntilRetirement("Brandon", 1988);
+yearsUntilRetirement("John", 1927);
+yearsUntilRetirement("Derek", 1990);
+*/
+
+//Lecture: Statements and expressions
+
+//statement performs an action not an immediate value
+/* function someFun = (par) {
+    //code
+}
+if(x===5) {
+    //do something
+}
+//expression outputs a value (outcome)
+var someFun = function(par) {
+    //code
+}
+3+5 
+var jar = 8
+*/
+
+//Lecture: Arrays
+
+var names = ["Brandon", "Derek", "Ashley"];
+var years = [1988, 1990, 1989];
+
+console.log(names[0]);
+names[1] = "Ben";
+console.log(names);
+
+var brandon = ["Brandon", "Allred", 1988, "Account Manager"];
+brandon.push("Red");
+brandon.unshift("Mr. ");
+brandon.pop(brandon);
+brandon.shift(brandon);
+
+console.log(brandon);
+
+alert(brandon.indexOf("Allred"));
+
+if (brandon.indexOf("teacher") === -1) {
+    console.log("Brandon is not teacher")
+}
