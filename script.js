@@ -180,7 +180,7 @@ var jar = 8
 
 //Lecture: Arrays
 
-var names = ["Brandon", "Derek", "Ashley"];
+/* var names = ["Brandon", "Derek", "Ashley"];
 var years = [1988, 1990, 1989];
 
 console.log(names[0]);
@@ -199,4 +199,122 @@ alert(brandon.indexOf("Allred"));
 
 if (brandon.indexOf("teacher") === -1) {
     console.log("Brandon is not teacher")
+}
+*/
+
+//Lecture: Objects
+/*
+var brandon = {
+    name: "Brandon",
+    lastName: "Allred",
+    yearOfBirth: 1988,
+    job: "Account manager",
+    isMarried: true
+};
+
+
+console.log(brandon.name);
+console.log(brandon["lastName"]);
+
+var xyz = "job";
+console.log(brandon[xyz]);
+
+brandon.lastName = "Miller";
+brandon["job"] = "Programer";
+
+console.log(brandon);
+
+var jane = new Object();
+jane.name = "Jane";
+jane.lastName = "Miller";
+jane["yearOfBirth"] = 1990;
+jane["isMarried"] = false;
+
+console.log(jane)
+//////////////////////////////////////////////////////////////
+Version 1
+var brandon = {
+    name: "Brandon",
+    lastName: "Allred",
+    yearOfBirth: 1988,
+    job: "Account manager",
+    isMarried: true,
+    family: ["Derek", "Alyssa"],
+    calculateAge: function(yearOfBirth) {
+        return 2017 - this.yearOfBirth;
+        //"this" refers to the the object brandon
+    }
+};
+console.log(brandon.family[1]);
+console.log(brandon.calculateAge());
+
+
+//var calculateAge = function (yearOfBirth) {
+
+//}
+
+var age = brandon.calculateAge();
+brandon.age = age;
+console.log(brandon)
+*/
+/////////////////////////////////////////////////////////////
+//Version 2
+/*
+var brandon = {
+    name: "Brandon",
+    lastName: "Allred",
+    yearOfBirth: 1988,
+    job: "Account manager",
+    isMarried: true,
+    family: ["Derek", "Alyssa"],
+    calculateAge: function(yearOfBirth) {
+        this.age = 2017 - this.yearOfBirth;
+        //"this" refers to the the object brandon
+    }
+};
+brandon.calculateAge();
+console.log(brandon);
+*/
+
+//Lecture: Loops
+/*
+for(var i = 0; i < 10; i++) {
+    console.log(i);
+}
+
+var names = ["Brandon", "Derek", "Alyssa", "Caden", "Kaylee"];
+ 
+for(var i = 0; i < names.length -2; i++) {
+    console.log(names[i]);
+}
+
+var names = ["Brandon", "Derek", "Alyssa", "Caden", "Kaylee"];
+
+for(var i = names.length -1; i >= 0 ;i--) {
+    console.log(names[i]);
+}
+*/
+
+//While Loops
+var names = ["Brandon", "Derek", "Alyssa", "Caden", "Kaylee"];
+
+var i = 0;
+while(i < names.length) {
+    console.log(names[i]);
+    i++;
+}
+
+for (var i = 1; i <= 5; i++) {
+    console.log(i)
+
+    if(i === 3) {
+        break;
+    }
+}
+
+for (var i = 1; i <= 5; i++) {
+    if(i === 3) {
+        continue;
+    }
+    console.log(i)
 }
