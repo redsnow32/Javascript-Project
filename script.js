@@ -296,7 +296,7 @@ for(var i = names.length -1; i >= 0 ;i--) {
 */
 
 //While Loops
-var names = ["Brandon", "Derek", "Alyssa", "Caden", "Kaylee"];
+/*var names = ["Brandon", "Derek", "Alyssa", "Caden", "Kaylee"];
 
 var i = 0;
 while(i < names.length) {
@@ -317,4 +317,21 @@ for (var i = 1; i <= 5; i++) {
         continue;
     }
     console.log(i)
+}
+*/
+
+var yearsBorn = [1988, 1990, 1979, 1982, 1999, 2001];
+var emptyArray = [];
+
+for (var i = 0; i < yearsBorn.length; i++) {
+    emptyArray.push(2017 - yearsBorn[i]);
+}
+// console.log(emptyArray);
+
+for (var i = 0; i < emptyArray.length; i++) {
+    if(i >= 18) {
+        console.log (emptyArray[i]);  
+    } else {
+
+    }
 }
