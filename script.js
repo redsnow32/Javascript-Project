@@ -321,17 +321,28 @@ for (var i = 1; i <= 5; i++) {
 */
 
 var yearsBorn = [1988, 1990, 1979, 1982, 1999, 2001];
+
+function printFullAge (yearsBorn) {
+
 var emptyArray = [];
-
-for (var i = 0; i < yearsBorn.length; i++) {
-    emptyArray.push(2017 - yearsBorn[i]);
-}
-// console.log(emptyArray);
-
-for (var i = 0; i < emptyArray.length; i++) {
-    if(i >= 18) {
-        console.log (emptyArray[i]);  
-    } else {
-
+var fullAges = [];
+    
+    for (var i = 0; i < yearsBorn.length; i++) {
+        // emptyArray.push(2017 - yearsBorn[i]);
+        emptyArray[i] = 2017 - yearsBorn[i];
     }
+    
+    for (var i = 0; i < emptyArray.length; i++) {
+        if(emptyArray[i] >= 18) {
+            console.log("Person " + (i + 1) + " is " + emptyArray[i] + " years old and is of full age.");
+            fullAges.push(true);
+        } else {
+            console.log("Person " + (i + 1) + " is " + emptyArray[i] + " years old and is NOT of full age."); 
+            fullAges.push(false);
+        }
+    }
+    return fullAges;
 }
+
+var full_1 = printFullAge(yearsBorn);
+var full_2 = printFullAge([2012, 1988, 1994]);
