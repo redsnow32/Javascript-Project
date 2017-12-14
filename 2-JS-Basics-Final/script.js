@@ -163,7 +163,7 @@ yearsUntilRetirement("Derek", 1990);
 
 //Lecture: Statements and expressions
 
-//statement performs an action does not have an immediate value
+//statement performs an action not an immediate value
 /* function someFun = (par) {
     //code
 }
@@ -346,5 +346,3 @@ var fullAges = [];
 
 var full_1 = printFullAge(yearsBorn);
 var full_2 = printFullAge([2012, 1988, 1994]);
-
-
