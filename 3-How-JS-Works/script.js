@@ -1,20 +1,38 @@
 ///////////////////////////////////////
 // Lecture: Hoisting
 
+calculateAge(1978);
+
+function calculateAge(year ){
+    console.log(2017 - year);
+}
+calculateAge(1988);
 
 
+//Expressions can only be called after being assigned.
+var retirement = function (year) {
+    console.log(65 - (2016 - year));
+}
+retirement(1988);
 
+//variables
 
+console.log(age);
+//variables that are called prior to being expressed
+//are going to show up as undefined. variables that don't
+//have a value yet
+var age = 29;
+console.log(age);
 
+function foo() {
+    var age = 65;
+    console.log(age);
+}
+foo();
+console.log(age);
 
-
-
-
-
-
-
-
-
+//You can use function declariations prior to declaring
+//them in our code.
 
 
 ///////////////////////////////////////
