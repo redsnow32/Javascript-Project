@@ -41,7 +41,7 @@ console.log(age);
 
 // First scoping example
 
-/*
+
 var a = 'Hello!';
 first();
 
@@ -54,7 +54,7 @@ function first() {
         console.log(a + b + c);
     }
 }
-*/
+
 
 
 
@@ -78,6 +78,10 @@ function third() {
     var d = 'John';
     console.log(a + b + c + d);
 }
+
+The only variables the third function can access are 
+a & d
+console.log(a+b);
 */
 
 
@@ -86,8 +90,45 @@ function third() {
 // Lecture: The this keyword
 
 
+/*
+The "this" keyword points to the "global object" or the window
+Method call "this " keyword points to the object calling the method
+not assigned a value until the object calls a method
+this is attached to a an execution context which is only 
+attached when a function is called.
+ */
+
+ //console.log(this);
+
+ function calculateAge(year) {
+     console.log(2017 - year);
+     console.log(this);
+ }
+
+ var brandon = {
+     name: "Brandon",
+     yearOfBirth: 1988,
+     calculateAge : function () {
+         console.log(2017 - this.yearOfBirth);
+
+         function innerFunction() {
+             console.log(this);
+         }
+         innerFunction();
+     }
+ }
+
+ brandon.calculateAge();
 
 
+
+ var mike = {
+     name: "Mike",
+     yearOfBirth: 1955
+ };
+
+ mike.calculateAge = brandon.calculateAge;
+ mike.calculateAge();
 
 
 
