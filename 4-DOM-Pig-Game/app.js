@@ -19,7 +19,7 @@ document.querySelector(".btn-roll").addEventListener("click", function () {
         //Display Result
         var diceDOM = document.querySelector(".dice");
         diceDOM.style.display = "block";
-        diceDOM.src = "/Users/brandon/Documents/code/Javascript-Project/4-DOM-Pig-Game/dice-" + dice + ".png";
+        diceDOM.src = "dice-" + dice + ".png";
 
         //Update round score if the rolled num isn't 1
         if(dice !== 1) {
@@ -74,7 +74,7 @@ function nextPlayer () {
 document.querySelector(".btn-new").addEventListener("click", init);
 
 function init () {
-    scrores = [0, 0];
+    scores = [0, 0];
     activePlayer = 0;
     roundScore = 0;
     gamePlaying = true;
