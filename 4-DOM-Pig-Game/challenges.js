@@ -12,6 +12,8 @@ var scores, roundScore, activePlayer, gamePlaying;
 
 init();
 
+var lastDice;
+
 document.querySelector(".btn-roll").addEventListener("click", function () {
     if(gamePlaying) {
         //1.Random Number
@@ -23,13 +25,18 @@ document.querySelector(".btn-roll").addEventListener("click", function () {
         
 
         //Update round score if the rolled num isn't 1
-        if(dice !== 1) {
+        if (dice === 6 && lastDice === 6) {
+        score[activePlayer] = 0;
+        document.querySelector("#score-" + activePlayer).textContent = 0;
+        nextPlayer();
+        } else if (dice !== 1) {
             //add score
             roundScore += dice;
             document.querySelector("#current-" + activePlayer).textContent = roundScore;
         } else {
             nextPlayer();
         }
+        lastDice = dice;
     }
 });    
 
